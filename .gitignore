@@ -216,3 +216,18 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Secrets — never commit these
+.env
+.env.*
+*.json
+!package.json
+
+# dbt
+target/
+dbt_packages/
+logs/
+
+# OS junk
+.DS_Store
+Thumbs.db
