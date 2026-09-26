@@ -1,0 +1,73 @@
+
+version: 2
+
+models:
+  # --- Staging ---
+  - name: stg_football_matches
+    columns:
+      - name: match_id
+        tests:
+          - not_null
+      - name: match_status
+        tests:
+          - accepted_values:
+             values: ['SCHEDULED', 'TIMED', 'IN_PLAY', 'PAUSED', 'FINISHED', 'POSTPONED', 'SUSPENDED', 'CANCELLED']
+      - name: home_team_id
+        tests:
+          - not_null
+      - name: away_team_id
+        tests:
+          - not_null
+
+  - name: stg_football_standings
+    columns:
+      - name: team_id
+        tests:
+          - not_null
+      - name: position
+        tests:
+          - not_null
+
+  - name: stg_football_scorers
+    columns:
+      - name: player_id
+        tests:
+          - not_null
+      - name: goals
+        tests:
+          - not_null
+
+  # --- Marts ---
+  - name: fct_football_matches
+    columns:
+      - name: match_id
+        tests:
+          - unique
+          - not_null
+      - name: home_team_id
+        tests:
+          - not_null
+      - name: away_team_id
+        tests:
+          - not_null
+
+  - name: dim_football_standings_scd
+    columns:
+      - name: team_id
+        tests:
+          - not_null
+      - name: position
+        tests:
+          - not_null
+      - name: valid_from
+        tests:
+          - not_null
+
+  - name: fct_football_scorers
+    columns:
+      - name: player_id
+        tests:
+          - not_null
+      - name: goals
+        tests:
+          - not_null

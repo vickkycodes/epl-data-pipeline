@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: football_raw
+    database: sublime-amp-480104-g6
+    schema: raw_football
+    tables:
+      - name: matches_raw
+      - name: standings_raw
+      - name: scorers_raw
