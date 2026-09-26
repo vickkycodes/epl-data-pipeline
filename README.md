@@ -537,7 +537,7 @@ Planned reporting includes:
 - Player goals
 - Historical league-position trends
 
-**Dashboard:** Coming soon
+
 
 ---
 
@@ -549,7 +549,6 @@ Potential extensions to the project include:
 - Partition large fact tables by match date
 - Cluster frequently filtered fields
 - Add dbt source freshness monitoring
-- Publish dbt documentation and lineage
 - Add automated pipeline failure notifications
 - Introduce CI checks for pull requests
 - Load additional Premier League seasons
