@@ -8,8 +8,6 @@ The project demonstrates a practical ELT architecture using API ingestion, cloud
 
 ## Why this project
 
-Many portfolio projects stop at loading a CSV and running SQL queries.
-
 This project was built to represent a more realistic data engineering workflow:
 
 - Data is automatically extracted from an external REST API
