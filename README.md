@@ -545,7 +545,6 @@ Planned reporting includes:
 
 Potential extensions to the project include:
 
-- Introduce incremental dbt models when billing-enabled BigQuery DML is available
 - Partition large fact tables by match date
 - Cluster frequently filtered fields
 - Add dbt source freshness monitoring
